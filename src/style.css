@@ -1,1 +1,100 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/* Estilos para el tapete */
+.tapete {
+  width: 100%;
+  height: 100vh;
+  background-color: green; /* Fondo verde como un tapete */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* estilos básicos para una carta general, como tamaño, borde, fondo y sombra de la carta... */
+.carta {
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  position: relative;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* estilos específicos para la class .carta y y posicion de los elementos dentro de la carta (.top-left, .bottom-right, .center).  */
+
+/* Estilos para cartas de corazones */
+.carta.corazones .top-left {
+  color: red;
+}
+.carta.corazones .bottom-right {
+  color: red;
+}
+.carta.corazones .center {
+  color: red;
+}
+
+/* Estilos para cartas de picas */
+.carta.espadas .top-left {
+  color: black;
+}
+.carta.espadas .bottom-right {
+  color: black;
+}
+.carta.espadas .center {
+  color: black;
+}
+
+/* Estilos para cartas de tréboles */
+.carta.treboles .top-left {
+  color: black;
+}
+.carta.treboles .bottom-right {
+  color: black;
+}
+.carta.treboles .center {
+  color: black;
+}
+
+/* Estilos para cartas de diamantes */
+.carta.diamantes .top-left {
+  color: red;
+}
+.carta.diamantes .bottom-right {
+  color: red;
+}
+.carta.diamantes .center {
+  color: red;
+}
+
+/* Posicion del valor y los símbolos dentro de la carta */
+
+/* esquina superior izquierda e esquina inferior derecha de la carta. */
+.carta .top-left,
+.carta .bottom-right {
+  position: absolute;
+  font-size: 20px;
+}
+
+/* esquina superior izquierda de la carta. */
+.carta .top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.carta .bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg); /* rotación de 180 grados hacia abajo */
+}
+
+.carta .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+}
+/* ransform: translate(-50%, -50%): centrar verticalmente como horizontalmente dentro del contenedor -50% indica que el elemento se trasladará hacia arriba y hacia la izquierda en un 50% */
+/* Esta técnica es muy útil para centrar elementos de manera dinámica, independientemente de su tamaño o del tamaño de su contenedor. */
