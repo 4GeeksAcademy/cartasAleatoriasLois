@@ -10,7 +10,6 @@
 
 /* estilos básicos para una carta general, como tamaño, borde, fondo y sombra de la carta... */
 .carta {
-  display: inline-block;
   width: 150px;
   height: 200px;
   border: 1px solid black;
